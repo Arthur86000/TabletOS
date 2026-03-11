@@ -83,7 +83,14 @@ if [ -z "$monitor_name" ]; then
     exit 1
 fi
 
-# Remplace la ligne 25 du fichier hyprland.conf
-sed -i "25s|.*|monitor=$monitor_name,preferred,auto,1,transform,0|" ~/.config/hypr/hyprland.conf
+# Remplace toute ligne commençant par "monitor=" par la nouvelle configuration
+sed -i "s|^monitor=.*|monitor=$monitor_name,preferred,auto,1,transform,0|" ~/.config/hypr/hyprland.conf
 
-echo "Ligne 25 mise à jour : monitor=$monitor_name,preferred,auto,1,transform,0"
+echo "Toutes les lignes 'monitor=' ont été mises à jour : monitor=$monitor_name,preferred,auto,1,transform,0"
+
+# 2. Ajoute "exec-once = iio-hyprland $monitor_name" après la ligne "# exec-once = waybar & hyprpaper & firefox"
+sed -i "/# exec-once = waybar & hyprpaper & firefox/a\exec-once = iio-hyprland $monitor_name" ~/.config/hypr/hyprland.conf
+
+
+
+

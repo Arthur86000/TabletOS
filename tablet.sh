@@ -51,6 +51,8 @@ sudo rm -r /dotfiles-main
 cd .config
 mkdir waybar
 
+cd ~/TabletOS/Waybar
+
 cd Waybar
 sudo cp config.jsonc ~/.config/waybar/
 sudo cp style.css ~/.config/waybar/
@@ -67,7 +69,21 @@ sudo cp style.css ~/.config/waybar/
 
 #hyprpm enable hyprgrass
 
+#####################
+#######Monitor#######
+#####################
 
 
+# Récupère le nom du moniteur avec la commande grep
+monitor_name=$(hyprctl monitors | grep -oP 'Monitor\s*\K.*?(?=\s*\()')
 
+# Vérifie que la variable n'est pas vide
+if [ -z "$monitor_name" ]; then
+    echo "Erreur : Aucun nom de moniteur trouvé."
+    exit 1
+fi
 
+# Remplace la ligne 25 du fichier hyprland.conf
+sed -i "25s|.*|monitor=$monitor_name,preferred,auto,1,transform,0|" ~/.config/hypr/hyprland.conf
+
+echo "Ligne 25 mise à jour : monitor=$monitor_name,preferred,auto,1,transform,0"

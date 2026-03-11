@@ -11,7 +11,7 @@ cd
 #./install.sh
 
 
-sudo dnf install hyprland git nwg-drawer kitty cmake meson gcc-c++ dbus-devel iio-sensor-proxy cpio hyprland-devel waybar glm
+sudo dnf install hyprland git nwg-drawer kitty cmake meson gcc-c++ dbus-devel iio-sensor-proxy cpio hyprland-devel waybar glm-devel
 sudo dnf group install development-tools
 
 #glslang-devel udis86-devel mcsm2-devel glm-devel doctest-devel
@@ -90,6 +90,7 @@ echo "Toutes les lignes 'monitor=' ont été mises à jour : monitor=$monitor_na
 
 # 2. Ajoute "exec-once = iio-hyprland $monitor_name" après la ligne "# exec-once = waybar & hyprpaper & firefox"
 sed -i "/# exec-once = waybar & hyprpaper & firefox/a\exec-once = iio-hyprland $monitor_name" ~/.config/hypr/hyprland.conf
+
 
 
 

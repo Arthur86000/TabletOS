@@ -17,6 +17,7 @@ sudo dnf group install development-tools
 #glslang-devel udis86-devel mcsm2-devel glm-devel doctest-devel
 
 
+hyprctl keyword input:kb_layout fr
 
 mount -o remount,size=3G,noexec,nosuid,nodev,noatime /run/user/1000
 hyprpm update
@@ -65,6 +66,7 @@ sudo cp style.css ~/.config/waybar/
 #hyprpm add https://github.com/horriblename/hyprgrass
 
 #hyprpm enable hyprgrass
+
 
 
 

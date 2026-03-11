@@ -11,7 +11,7 @@ cd
 #./install.sh
 
 
-sudo dnf install hyprland git nwg-drawer kitty cmake meson gcc-c++ dbus-devel iio-sensor-proxy cpio hyprland-devel
+sudo dnf install hyprland git nwg-drawer kitty cmake meson gcc-c++ dbus-devel iio-sensor-proxy cpio hyprland-devel waybar
 sudo dnf group install development-tools
 
 #glslang-devel udis86-devel mcsm2-devel glm-devel doctest-devel
@@ -47,6 +47,13 @@ sudo cp Font_NotoSansCJK /usr/share/fonts/
 cd
 sudo rm -r /dotfiles-main
 
+cd .config
+mkdir waybar
+
+cd Waybar
+sudo cp config.jsonc ~/.config/waybar/
+sudo cp style.css ~/.config/waybar/
+
 #sudo rm -rf /usr/include/hyprland
 #sudo rm -rf /usr/local/include/hyprland/
 
@@ -55,8 +62,9 @@ sudo rm -r /dotfiles-main
 #ninja -C build
 
 
-hyprpm add https://github.com/horriblename/hyprgrass
+#hyprpm add https://github.com/horriblename/hyprgrass
 
-hyprpm enable hyprgrass
+#hyprpm enable hyprgrass
+
 
 

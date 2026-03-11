@@ -5,10 +5,10 @@ sudo dnf copr enable sdegler/hyprland
 
 cd
 
-git clone --depth=1 https://github.com/JaKooLit/Fedora-Hyprland.git ~/Fedora-Hyprland
-cd ~/Fedora-Hyprland
-chmod +x install.sh
-./install.sh
+#git clone --depth=1 https://github.com/JaKooLit/Fedora-Hyprland.git ~/Fedora-Hyprland
+#cd ~/Fedora-Hyprland
+#chmod +x install.sh
+#./install.sh
 
 
 sudo dnf install hyprland git nwg-drawer kitty cmake meson gcc-c++ dbus-devel iio-sensor-proxy cpio hyprland-devel
@@ -58,3 +58,4 @@ ninja -C build
 hyprpm add https://github.com/horriblename/hyprgrass
 
 hyprpm enable hyprgrass
+

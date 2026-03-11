@@ -14,7 +14,7 @@ cd
 sudo dnf install hyprland git nwg-drawer kitty cmake meson gcc-c++ dbus-devel iio-sensor-proxy cpio hyprland-devel
 sudo dnf group install development-tools
 
-glslang-devel udis86-devel mcsm2-devel glm-devel doctest-devel
+#glslang-devel udis86-devel mcsm2-devel glm-devel doctest-devel
 
 
 
@@ -47,15 +47,16 @@ sudo cp Font_NotoSansCJK /usr/share/fonts/
 cd
 sudo rm -r /dotfiles-main
 
-sudo rm -rf /usr/include/hyprland
-sudo rm -rf /usr/local/include/hyprland/
+#sudo rm -rf /usr/include/hyprland
+#sudo rm -rf /usr/local/include/hyprland/
 
-git clone https://github.com/WayfireWM/wf-touch
-meson setup build
-ninja -C build
+#git clone https://github.com/WayfireWM/wf-touch
+#meson setup build
+#ninja -C build
 
 
 hyprpm add https://github.com/horriblename/hyprgrass
 
 hyprpm enable hyprgrass
+
 

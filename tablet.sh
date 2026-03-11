@@ -60,14 +60,9 @@ sudo cp style.css ~/.config/waybar/
 #sudo rm -rf /usr/include/hyprland
 #sudo rm -rf /usr/local/include/hyprland/
 
-#git clone https://github.com/WayfireWM/wf-touch
-#meson setup build
-#ninja -C build
 
-
-#hyprpm add https://github.com/horriblename/hyprgrass
-
-#hyprpm enable hyprgrass
+hyprpm add https://github.com/horriblename/hyprgrass
+hyprpm enable hyprgrass
 
 #####################
 #######Monitor#######
@@ -90,6 +85,7 @@ echo "Toutes les lignes 'monitor=' ont été mises à jour : monitor=$monitor_na
 
 # 2. Ajoute "exec-once = iio-hyprland $monitor_name" après la ligne "# exec-once = waybar & hyprpaper & firefox"
 sed -i "/# exec-once = waybar & hyprpaper & firefox/a\exec-once = iio-hyprland $monitor_name" ~/.config/hypr/hyprland.conf
+
 
 
 

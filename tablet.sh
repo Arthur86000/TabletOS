@@ -33,12 +33,12 @@ sudo rm -r iio-hyprland
 
 git clone https://github.com/Anik200/dotfiles.git
 cd dotfiles/additional-assets/
-tar xf Font_CascadiaCove.tar
-tar xf Font_JetBrainsMono.tar
-tar xf Font_MapleNerd.tar
-tar xf Font_MaterialDesign.tar
-tar xf Font_MononokiNerd.tar
-tar xf Font_NotoSansCJK.tar
+tar xf Font_CascadiaCove.tar.gz
+tar xf Font_JetBrainsMono.tar.gz
+tar xf Font_MapleNerd.tar.gz
+tar xf Font_MaterialDesign.tar.gz
+tar xf Font_MononokiNerd.tar.gz
+tar xf Font_NotoSansCJK.tar.gz
 sudo cp Font_CascadiaCove /usr/share/fonts/
 sudo cp Font_JetBrainsMono /usr/share/fonts/
 sudo cp Font_MapleNerd /usr/share/fonts/
@@ -85,6 +85,7 @@ echo "Toutes les lignes 'monitor=' ont été mises à jour : monitor=$monitor_na
 
 # 2. Ajoute "exec-once = iio-hyprland $monitor_name" après la ligne "# exec-once = waybar & hyprpaper & firefox"
 sed -i "/# exec-once = waybar & hyprpaper & firefox/a\exec-once = iio-hyprland $monitor_name" ~/.config/hypr/hyprland.conf
+
 
 
 

@@ -43,10 +43,10 @@ sudo cp -r CascadiaCove /usr/share/fonts/
 sudo cp -r JetBrains /usr/share/fonts/
 sudo cp -r MapleMono /usr/share/fonts/
 sudo cp -r MaterialDesign /usr/share/fonts/
-sudo cp -r Monoki /usr/share/fonts/
+sudo cp -r Mononoki /usr/share/fonts/
 sudo cp -r NotoSansCJK /usr/share/fonts/
 cd
-sudo rm -r /dotfiles-main
+sudo rm -r /dotfiles
 
 cd .config
 mkdir waybar
@@ -85,6 +85,7 @@ echo "Toutes les lignes 'monitor=' ont été mises à jour : monitor=$monitor_na
 
 # 2. Ajoute "exec-once = iio-hyprland $monitor_name" après la ligne "# exec-once = waybar & hyprpaper & firefox"
 sed -i "/# exec-once = waybar & hyprpaper & firefox/a\exec-once = iio-hyprland $monitor_name" ~/.config/hypr/hyprland.conf
+
 
 
 

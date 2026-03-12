@@ -32,7 +32,7 @@ cd
 sudo rm -r iio-hyprland
 
 git clone https://github.com/Anik200/dotfiles.git
-cd /dotfiles-main/additional-assets
+cd dotfiles/additional-assets
 tar xf Font_CascadiaCove.tar
 tar xf Font_JetBrainsMono.tar
 tar xf Font_MapleNerd.tar
@@ -85,6 +85,7 @@ echo "Toutes les lignes 'monitor=' ont été mises à jour : monitor=$monitor_na
 
 # 2. Ajoute "exec-once = iio-hyprland $monitor_name" après la ligne "# exec-once = waybar & hyprpaper & firefox"
 sed -i "/# exec-once = waybar & hyprpaper & firefox/a\exec-once = iio-hyprland $monitor_name" ~/.config/hypr/hyprland.conf
+
 
 
 
